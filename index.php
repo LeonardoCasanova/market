@@ -5,89 +5,130 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Bootstrap 4 Card Columns</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <style>
-    .bs-example {
-      margin: 20px;
-    }
-  </style>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!------ Include the above in your HEAD tag ---------->
+
+  <link rel="stylesheet" href="src/images/css/index.css">
 </head>
+<?php
+
+$nomeMercado = array("Cato" => "http://www.catosupermercados.com.br/imagens/logonovo.png", "Sumerbol" => "https://www.sumerbol.com.br/themes/wc_default/images/logo.png");
+
+?>
 
 <body>
   <div class="bs-example">
     <div class="container">
-      <div class="row">
-        <div class="card-columns">
-          <div class="card">
-            <img src="/examples/images/thumbnail.svg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit. Nam eu sem tempor, varius quam
-                at, luctus dui. Mauris magna metus, dapibus nec turpis velde, semper malesuada.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-          <div class="card p-3">
-            <blockquote class="blockquote mb-0 card-body">
-              <p>Nam eget purus consectetur in vehicula. Nullamr ultrices nisl risus, viverra libero egestas sit amet.
-              </p>
-              <footer class="blockquote-footer">
-                <small class="text-muted">Someone famous</small>
-              </footer>
-            </blockquote>
-          </div>
-          <div class="card">
-            <img src="/examples/images/thumbnail.svg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Vestibulum id metus ac nisl bibendum scelerisque non dignissim purus.</p>
-              <p class="card-text"><small class="text-muted">Last updated 2 mins ago</small></p>
-            </div>
-          </div>
-          <div class="card bg-primary text-white text-center p-3">
-            <blockquote class="blockquote mb-0">
-              <p>Pulvinar leo id risus pellentesque vestibulum. Sed diam libero, sodales eget sapien vel.</p>
-              <footer class="blockquote-footer text-white">
-                <small>Someone famous</small>
-              </footer>
-            </blockquote>
-          </div>
-          <div class="card text-center">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Enim arcu, interdum dignissim venenatis velc metus posuere oc.</p>
-              <p class="card-text"><small class="text-muted">Last updated 1 mins ago</small></p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="/examples/images/thumbnail.svg" class="card-img-top" alt="...">
-          </div>
-          <div class="card p-3 text-right">
-            <blockquote class="blockquote mb-0">
-              <p>Quis quam ut magna consequat faucibus. Pellentesque eget nisi suscipit tincidunt. Pellentesque viverra
-                sagittis quam at.</p>
-              <footer class="blockquote-footer">
-                <small class="text-muted">Someone famous</small>
-              </footer>
-            </blockquote>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Convallis eget pretium eu, bibendum non leo. Proin suscipit purus adipiscing dolor
-                gravida fermentum sapien blandit. Praesent pellentesque ligula dui, in gravida turpis acmy interdum vel
-                metus.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      <br>
+      <!-- Mercados -->
+      <section id="team" class="pb-5">
+        <div class="container">
+          <h5 class="section-title h1">Ofertas de Supermercados - Indaiatuba</h5>
+          <div class="row">
+            <?php
+            foreach ($nomeMercado as $key => $value) {
+            ?>
+
+              <!-- Card Mercado -->
+              <div class="grid-container col-xs-12 col-sm-6 col-md-4">
+                <div class="mainflip">
+                  <div class="frontside">
+                    <div class="card">
+                      <div class="card-body text-center">
+                        <p><img class=" img-fluid" src="<?php echo $value ?>" alt="card image"></p>
+                        <!-- <h4 class="card-title"><?php echo $key ?></h4> -->
+                        <div class="card-body text-center">
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            Veja as Ofertas
+                          </button>
+                        </div>
+                        <div class="card-body text-center">
+                          <p class="card-text">Ofertas válidas até 16/06 </p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ./Card Mercado-->
+
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <!-- <div class="embed-responsive embed-responsive-21by9">
+                        <iframe class="embed-responsive-item" src="http://www.catosupermercados.com.br/pages/1.jpg" allowfullscreen="" allowtransparency="true"></iframe>
+                      </div> -->
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            <?php
+            }
+            ?>
+
+
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </section>
+      <!-- Mercados -->
+
+
+
 </body>
 
 </html>
