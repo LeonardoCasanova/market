@@ -14,11 +14,12 @@
 
   <!------ Include the above in your HEAD tag ---------->
 
-  <link rel="stylesheet" href="src/images/css/index.css">
+  <link rel="stylesheet" href="src/css/index.css">
 </head>
 <?php
 
-$nomeMercado = array("Cato" => "http://www.catosupermercados.com.br/imagens/logonovo.png", "Sumerbol" => "https://www.sumerbol.com.br/themes/wc_default/images/logo.png");
+$json_data = json_decode(file_get_contents('src/path/mercados.json'));
+$mercados = $json_data->mercados;
 
 ?>
 
@@ -67,7 +68,7 @@ $nomeMercado = array("Cato" => "http://www.catosupermercados.com.br/imagens/logo
           <h5 class="section-title h1">Ofertas de Supermercados - Indaiatuba</h5>
           <div class="row">
             <?php
-            foreach ($nomeMercado as $key => $value) {
+            foreach ($mercados as $mercado) {
             ?>
 
               <!-- Card Mercado -->
@@ -76,15 +77,14 @@ $nomeMercado = array("Cato" => "http://www.catosupermercados.com.br/imagens/logo
                   <div class="frontside">
                     <div class="card">
                       <div class="card-body text-center">
-                        <p><img class=" img-fluid" src="<?php echo $value ?>" alt="card image"></p>
-                        <!-- <h4 class="card-title"><?php echo $key ?></h4> -->
+                        <p><img class=" img-fluid" src="<?php echo $mercado->logo_mercado?>" alt="card image"></p>
                         <div class="card-body text-center">
                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                             Veja as Ofertas
                           </button>
                         </div>
                         <div class="card-body text-center">
-                          <p class="card-text">Ofertas válidas até 16/06 </p>
+                          <p class="card-text"><?php echo $mercado->data_ofertas ?> </p>
 
                         </div>
                       </div>
@@ -126,9 +126,6 @@ $nomeMercado = array("Cato" => "http://www.catosupermercados.com.br/imagens/logo
         </div>
       </section>
       <!-- Mercados -->
-
-
-
 </body>
 
 </html>

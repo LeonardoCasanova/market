@@ -1,20 +1,22 @@
-[
-  {
-    "id": 2,
-    "nome_mercado": "Cato",
-    "path": [
-      "http://cato.com.br/img1.png",
-      "http://cato.com.br/img1.png"
-    ],
-    "data_ofertas": " 16 à 18 de junho"
-  },
-  {
-    "id": 2,
-    "nome_mercado": "Cato",
-    "path": [
-      "http://cato.com.br/img1.png",
-      "http://cato.com.br/img1.png"
-    ],
-    "data_ofertas": " 16 à 18 de junho"
-  }
-]
+{
+  "mercados": [
+    {
+      "id": 1,
+      "nome_mercado": "Cato",
+      "logo_mercado": "http://www.catosupermercados.com.br/imagens/logonovo.png",
+      "path": [
+        "src/path/cato1.jpg"
+      ],
+      "data_ofertas": " 16 à 18 de junho"
+    },
+    {
+      "id": 2,
+      "nome_mercado": "Sumerbol",
+      "logo_mercado": "https://www.sumerbol.com.br/themes/wc_default/images/logo.png",
+      "path": [
+        "src/path/sumerbol1.pdf"
+      ],
+      "data_ofertas": " 16 à 18 de junho"
+    }
+  ]
+}
