@@ -1,0 +1,20 @@
+[
+  {
+    "id": 2,
+    "nome_mercado": "Cato",
+    "path": [
+      "http://cato.com.br/img1.png",
+      "http://cato.com.br/img1.png"
+    ],
+    "data_ofertas": " 16 à 18 de junho"
+  },
+  {
+    "id": 2,
+    "nome_mercado": "Cato",
+    "path": [
+      "http://cato.com.br/img1.png",
+      "http://cato.com.br/img1.png"
+    ],
+    "data_ofertas": " 16 à 18 de junho"
+  }
+]
