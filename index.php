@@ -77,7 +77,7 @@ $mercados = $json_data->mercados;
                   <div class="frontside">
                     <div class="card">
                       <div class="card-body text-center">
-                        <p><img class=" img-fluid" src="<?php echo $mercado->logo_mercado?>" alt="card image"></p>
+                        <p><img class=" img-fluid" src="<?php echo $mercado->logo_mercado ?>" alt="card image"></p>
                         <div class="card-body text-center">
                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                             Veja as Ofertas
@@ -126,6 +126,15 @@ $mercados = $json_data->mercados;
         </div>
       </section>
       <!-- Mercados -->
+
+      <!-- Footer -->
+        <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+          <div class="container text-center">
+            <small>Copyright &copy; Your Website</small>
+          </div>
+        </footer>
+      <!-- Footer -->
+
 </body>
 
 </html>
