@@ -24,6 +24,47 @@ $mercados = $json_data->mercados;
 ?>
 
 <body>
+<script type="text/javascript">
+        function readTextFile(file, callback) {
+            var rawFile = new XMLHttpRequest();
+            rawFile.overrideMimeType("application/json");
+            rawFile.open("GET", file, true);
+            rawFile.onreadystatechange = function() {
+                if (rawFile.readyState === 4 && rawFile.status == "200") {
+                    callback(rawFile.responseText);
+                }
+            }
+            rawFile.send(null);
+        }
+
+        function abreModal(id) {
+            readTextFile("src/path/mercados.json", function(text){
+              var data = JSON.parse(text);
+              var fotos = data['mercados'][id-1]['path'];
+              var html =  '';
+
+              var i = 0;
+              for (var k in fotos) {
+                if(i == 0){
+                  html += '<div class="carousel-item active">';
+                  i++;
+                }else{
+                  html += '<div class="carousel-item">';
+                }
+
+                html += '  <img class="d-block w-100" src="'+fotos[k]+'"  alt="Second slide">'+
+                        '</div>';
+              }
+
+
+
+              document.getElementById("pictures").innerHTML = html;
+
+            });
+        }
+
+    </script>
+
   <div class="bs-example">
     <div class="container">
 
@@ -79,7 +120,7 @@ $mercados = $json_data->mercados;
                       <div class="card-body text-center">
                         <p><img class=" img-fluid" src="<?php echo $mercado->logo_mercado ?>" alt="card image"></p>
                         <div class="card-body text-center">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                          <button type="button" class="btn btn-primary" onClick="abreModal(<?php echo $mercado->id; ?>)" data-target="#exampleModal" data-toggle="modal">
                             Veja as Ofertas
                           </button>
                         </div>
@@ -106,9 +147,24 @@ $mercados = $json_data->mercados;
                       </button>
                     </div>
                     <div class="modal-body">
-                      <!-- <div class="embed-responsive embed-responsive-21by9">
-                        <iframe class="embed-responsive-item" src="http://www.catosupermercados.com.br/pages/1.jpg" allowfullscreen="" allowtransparency="true"></iframe>
-                      </div> -->
+                      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                          <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                          </ol>
+                          <div class="carousel-inner" id="pictures">
+
+                          </div>
+                          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
