@@ -1,92 +1,136 @@
+<!--
+=========================================================
+* Argon Dashboard - v1.2.0
+=========================================================
+* Product Page: https://www.creative-tim.com/product/argon-dashboard
+
+
+* Copyright  Creative Tim (http://www.creative-tim.com)
+* Coded by www.creative-tim.com
+
+
+
+=========================================================
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Bootstrap 4 Card Columns</title>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-  <!------ Include the above in your HEAD tag ---------->
-
-  <link rel="stylesheet" href="src/css/index.css">
-
+  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+  <meta name="author" content="Creative Tim">
+  <title>Lista de supermercado</title>
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/brand/favicon.png" type="image/png">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <!-- Icons -->
+  <link rel="stylesheet" href="assets/vendor/nucleo/css/nucleo.css" type="text/css">
+  <link rel="stylesheet" href="assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+  <!-- Page plugins -->
+  <!-- Argon CSS -->
+  <link rel="stylesheet" href="assets/css/argon.css?v=1.2.0" type="text/css">
 </head>
+
+<body>
+<script src="assets/js/market.js"> </script>
 <?php
 $json_data = json_decode(file_get_contents('src/path/mercados.json'));
 $mercados = $json_data->mercados;
 ?>
-
-<body>
-  <script src="src/js/market.js"> </script>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">Encontre aqui - Promoção de Supermercados</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <!-- <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul> -->
-    </div>
-  </nav>
-
-  <div class="bs-example">
-
-    <div class="row">
-      <!--- Espaço para Propaganda --->
-      <div class="col-2">
-        <h1>Propagand</h1>
+  <!-- Main content -->
+  <div class="main-content" id="panel">
+    <!-- Topnav -->
+    <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Search form -->
+          <h1 style="color:white">Encontre aqui - Promoções de supermercados</h1>
+          <!-- Navbar links -->
+          <ul class="navbar-nav align-items-center  ml-md-auto ">
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="ni ni-bell-55"> Quero adicionar um mercado</i>
+              </a>
+              <!--div class="dropdown-menu dropdown-menu-xl  dropdown-menu-right  py-0 overflow-hidden">
+                <div class="list-group list-group-flush">
+                  <a href="#!" class="list-group-item list-group-item-action">
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+                        <img alt="Image placeholder" src="assets/img/theme/team-1.jpg" class="avatar rounded-circle">
+                      </div>
+                      <div class="col ml--2">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div>
+                            <h4 class="mb-0 text-sm">John Snow</h4>
+                          </div>
+                          <div class="text-right text-muted">
+                            <small>2 hrs ago</small>
+                          </div>
+                        </div>
+                        <p class="text-sm mb-0">Let's meet at Starbucks at 11:30. Wdyt?</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div-->
+            </li>
+          </ul>
+        </div>
       </div>
-      <!---Fim Espaço para Propaganda --->
-      <br>
-      <!-- Mercados -->
-      <div class="col">
-        <section id="team" class="pb-5">
-          <div class="container">
-            <h5 class="section-title h1">Ofertas de Supermercados - Indaiatuba</h5>
-            <div class="row">
-              <?php
+    </nav>
+    <!-- Header -->
+
+    <!-- Header -->
+    <div class="header">
+      <div class="container-fluid">
+            
+        <!--- Espaço para Propaganda --->
+        <div class="col-2">
+          <h1>Propaganda aqui</h1>
+        </div>
+        <!--- Fim Espaço para Propaganda --->
+
+        <div class="header-body">
+          <div class="row align-items-center py-4">
+          <h5 class="section-title h1">Ofertas de Supermercados - Indaiatuba</h5>
+
+          </div>
+          <!-- Card stats -->
+          <div class="row">
+            <?php
               foreach ($mercados as $mercado) {
               ?>
-                <!-- Card Mercado -->
-                <div class="grid-container col-xs-12 col-sm-6 col-md-4">
-                  <div class="mainflip">
-                    <div class="frontside">
-                      <div class="card">
+              <!-- Card Mercado -->
+              <div class="grid-container col-xs-12 col-sm-6 col-md-4">
+                <div class="mainflip">
+                  <div class="frontside">
+                    <div class="card">
+                      <div class="card-body text-center">
+                        <p><img class=" img-fluid" src="<?php echo $mercado->logo_mercado ?>" height="100px" width="100px" alt="card image"></p>
                         <div class="card-body text-center">
-                          <p><img class=" img-fluid" src="<?php echo $mercado->logo_mercado ?>" height="50px" width="50px" alt="card image"></p>
-                          <div class="card-body text-center">
-                            <button type="button" class="btn btn-primary" onClick="abreModal(<?php echo $mercado->id; ?>)" data-target="#exampleModal" data-toggle="modal">
-                              Veja as Ofertas
-                            </button>
-                          </div>
-                          <div class="card-body text-center">
-                            <p class="card-text"><?php echo $mercado->data_ofertas ?> </p>
+                          <button type="button" class="btn btn-primary" onClick="abreModal(<?php echo $mercado->id; ?>)" data-target="#exampleModal" data-toggle="modal">
+                            Veja as Ofertas
+                          </button>
+                        </div>
+                        <div class="card-body text-center">
+                          <p class="card-text">Validade: <?php echo $mercado->data_ofertas ?> </p>
 
-                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <!-- ./Card Mercado-->
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              </div>
+              <!-- ./Card Mercado-->
+              <?php
+              }
+              ?>
+          </div>
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -122,30 +166,27 @@ $mercados = $json_data->mercados;
                     </div>
                   </div>
                 </div>
-
-              <?php
-              }
-              ?>
-
-            </div>
-          </div>
-        </section>
-      </div>
-      <!-- Mercados -->
       <!--- Espaço para Propaganda --->
       <div class="col-2">
-        <h1>Propagand</h1>
+        <h1>Propaganda aqui</h1>
       </div>
       <!--- Fim Espaço para Propaganda --->
+
+        </div>
+      </div>
     </div>
+    <!-- Page content -->
+
   </div>
-  <!-- Footer -->
-  <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
-    <div class="container text-center">
-      <small>Copyright &copy; Encontre aqui - 2020</small>
-    </div>
-  </footer>
-  <!-- Footer -->
+  <!-- Argon Scripts -->
+  <!-- Core -->
+  <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/js-cookie/js.cookie.js"></script>
+  <script src="assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+  <script src="assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+  <!-- Argon JS -->
+  <script src="assets/js/argon.js?v=1.2.0"></script>
 </body>
 
 </html>

@@ -28,18 +28,7 @@
         "src/path/pague_menos1-3.jpg"
       ],
       "data_ofertas": " 18 à 24 de junho"
-    },
-        {
-          "id": 3,
-          "nome_mercado": "Pague 333",
-          "logo_mercado": "https://www.supermercadospaguemenos.com.br/web/wp-content/uploads/2017/12/Logo-Pague-Menos-2017.png",
-          "path": [
-            "src/path/pague_menos1-1.jpg",
-            "src/path/pague_menos1-2.jpg",
-            "src/path/pague_menos1-3.jpg"
-          ],
-          "data_ofertas": " 18 à 24 de junho"
-        }
+    }
    
   ]
 }
