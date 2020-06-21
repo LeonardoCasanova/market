@@ -29,17 +29,18 @@
   <!-- Icons -->
   <link rel="stylesheet" href="assets/vendor/nucleo/css/nucleo.css" type="text/css">
   <link rel="stylesheet" href="assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+  <link rel="stylesheet" href="css/index.css" type="text/css">
   <!-- Page plugins -->
   <!-- Argon CSS -->
   <link rel="stylesheet" href="assets/css/argon.css?v=1.2.0" type="text/css">
 </head>
 
 <body>
-<script src="assets/js/market.js"> </script>
-<?php
-$json_data = json_decode(file_get_contents('src/path/mercados.json'));
-$mercados = $json_data->mercados;
-?>
+  <script src="assets/js/market.js"> </script>
+  <?php
+  $json_data = json_decode(file_get_contents('src/path/mercados.json'));
+  $mercados = $json_data->mercados;
+  ?>
   <!-- Main content -->
   <div class="main-content" id="panel">
     <!-- Topnav -->
@@ -86,7 +87,7 @@ $mercados = $json_data->mercados;
     <!-- Header -->
     <div class="header">
       <div class="container-fluid">
-            
+
         <!--- Espaço para Propaganda --->
         <div class="col-2">
           <h1>Propaganda aqui</h1>
@@ -95,14 +96,14 @@ $mercados = $json_data->mercados;
 
         <div class="header-body">
           <div class="row align-items-center py-4">
-          <h5 class="section-title h1">Ofertas de Supermercados - Indaiatuba</h5>
+            <h5 class="section-title h1">Ofertas de Supermercados - Indaiatuba</h5>
 
           </div>
           <!-- Card stats -->
           <div class="row">
             <?php
-              foreach ($mercados as $mercado) {
-              ?>
+            foreach ($mercados as $mercado) {
+            ?>
               <!-- Card Mercado -->
               <div class="grid-container col-xs-12 col-sm-6 col-md-4">
                 <div class="mainflip">
@@ -125,52 +126,52 @@ $mercados = $json_data->mercados;
                 </div>
               </div>
               <!-- ./Card Mercado-->
-              <?php
-              }
-              ?>
+            <?php
+            }
+            ?>
           </div>
-                          <!-- Modal -->
-                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                          <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                          </ol>
-                          <div class="zoom">
-                            <div class="carousel-inner" id="pictures">
-                            </div>
-                          </div>
-                          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                          </a>
-                          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="zoom">
+                      <div class="carousel-inner" id="pictures">
                       </div>
                     </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
                   </div>
                 </div>
-      <!--- Espaço para Propaganda --->
-      <div class="col-2">
-        <h1>Propaganda aqui</h1>
-      </div>
-      <!--- Fim Espaço para Propaganda --->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--- Espaço para Propaganda --->
+          <div class="col-2">
+            <h1>Propaganda aqui</h1>
+          </div>
+          <!--- Fim Espaço para Propaganda --->
 
         </div>
       </div>
