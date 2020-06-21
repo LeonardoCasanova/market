@@ -1,5 +1,5 @@
  .bs-example {
-      margin: 20px;
+      margin: 10px;
     }
 
     /* FontAwesome for working BootSnippet :> */
@@ -71,11 +71,6 @@
       position: relative;
     }
 
-
-    .card-collumn {
-      col-xs-12 col-sm-6 col-md-4
-    }
-
     .frontside {
       position: relative;
       -webkit-transform: rotateY(0deg);
@@ -84,69 +79,50 @@
       margin-bottom: 30px;
     }
 
-    .backside {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: white;
-      -webkit-transform: rotateY(-180deg);
-      -moz-transform: rotateY(-180deg);
-      -o-transform: rotateY(-180deg);
-      -ms-transform: rotateY(-180deg);
-      transform: rotateY(-180deg);
-      -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
-      -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
-      box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
-    }
-
-    .frontside,
-    .backside {
-      -webkit-backface-visibility: hidden;
-      -moz-backface-visibility: hidden;
-      -ms-backface-visibility: hidden;
-      backface-visibility: hidden;
-      -webkit-transition: 1s;
-      -webkit-transform-style: preserve-3d;
-      -moz-transition: 1s;
-      -moz-transform-style: preserve-3d;
-      -o-transition: 1s;
-      -o-transform-style: preserve-3d;
-      -ms-transition: 1s;
-      -ms-transform-style: preserve-3d;
-      transition: 1s;
-      transform-style: preserve-3d;
-    }
-
-    .frontside .card,
-    .backside .card {
-      min-height: 312px;
-    }
-
-    .backside .card a {
-      font-size: 18px;
-      color: #007b5e !important;
-    }
-
     .frontside .card .card-title,
     .backside .card .card-title {
       color: #007b5e !important;
     }
 
     .frontside .card .card-body img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
+      width: 150px;
+      height: 70px;
+      border-radius: 20%;
     }
 
 
  .grid-container {
   display: grid;
-  grid-template-rows: 1fr 0.1fr 1.9fr;
-  gap: 1px 1px;
   grid-template-areas: ". . . ." ". . . ." ". . . .";
-  -webkit-border-radius: 500px;
-  -moz-border-radius: 500px;
-  border-radius: 500px;
 }
 
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='red' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='red' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.zoom {
+	overflow: hidden;
+}
+
+.zoom img {
+    width: 100%; 
+    border-radius: 2px;
+    -webkit-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+    -moz-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+    -ms-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+    -o-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+    transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+}
+
+.zoom:hover img {
+	-webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+}
    
