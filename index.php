@@ -29,7 +29,7 @@
   <!-- Icons -->
   <link rel="stylesheet" href="assets/vendor/nucleo/css/nucleo.css" type="text/css">
   <link rel="stylesheet" href="assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
-  <link rel="stylesheet" href="css/index.scss" type="text/css">
+  <link rel="stylesheet" href="assets/css/index.scss" type="text/css">
   <!-- Page plugins -->
   <!-- Argon CSS -->
   <link rel="stylesheet" href="assets/css/argon.css?v=1.2.0" type="text/css">
@@ -42,10 +42,12 @@
     });
   </script>
 
+  <script src="assets/js/market.js"> </script>
+
 </head>
 
 <body>
-  <script src="assets/js/market.js"> </script>
+
   <?php
   $json_data = json_decode(file_get_contents('src/path/mercados.json'));
   $mercados = $json_data->mercados;
@@ -156,9 +158,10 @@
                       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     </ol>
-                    <div class="figure.zoom">
+
+                    <div class="zoom"  id="divZoom" >
                       <div class="carousel-inner" id="pictures">
-                      </div>
+                    </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -186,7 +189,6 @@
       </div>
     </div>
     <!-- Page content -->
-
   </div>
   <!-- Argon Scripts -->
   <!-- Core -->
