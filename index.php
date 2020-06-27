@@ -23,7 +23,7 @@
   <meta name="author" content="Creative Tim">
   <title>Lista de supermercado</title>
   <!-- Favicon -->
-  <!-- <link rel="icon" href="assets/img/brand/favicon.png" type="image/png"> -->
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQRYHOti4wPTr49sMvuKj8AxzHVZ3yungYLTg&usqp=CAU" type="image/png">
   <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
   <!-- Icons -->
@@ -37,6 +37,36 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script data-ad-client="ca-pub-7560554626989010" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script src="assets/js/market.js"> </script>
+
+
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ofertas dos Supermercados do Rio de Janeiro, Belo Horizonte e do Brasil" />
+  <meta property="og:description" content="Ofertas do extra, carrefour, walmart, anunciadas em folhetos, encartes e tabloides no Rio de Janeiro, Brasilia, Salvador, São Paulo, Belo Horizonte, Recife." />
+  <meta property="og:url" content="https://vouaosupermercado.com.br/" />
+  <meta property="og:site_name" content="Vou ao Supermercado - Ofertas" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:description" content="Ofertas do extra, carrefour, walmart, anunciadas em folhetos, encartes e tabloides no Rio de Janeiro, Brasilia, Salvador, São Paulo, Belo Horizonte, Recife." />
+  <meta name="twitter:title" content="Ofertas dos Supermercados do Rio de Janeiro, Belo Horizonte e do Brasil" />
+
+  <meta name="description" content="Ofertas do extra, carrefour, walmart, anunciadas em folhetos, encartes e tabloides no Rio de Janeiro, Brasilia, Salvador, São Paulo, Belo Horizonte, Recife." />
+  <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+
+  <meta property="og:title" content="Inicial - Vou ao Supermercado - Ofertas" />
+  <meta property="og:description" content="Ofertas de Supermercados
+Folhetos e anunciadas na TV
+Hoje
+Ofertas de hoje nos supermercados. Promoções e preços de produtos dos supermercados de todo o Brasil. Carrefour, Extra Hipermercado, Walmart, Guanabara, Sonda, Dia Supermercado, Supermarket, Campeão, Apoio, Super Luna e outros. Folhetos, encartes, catálogos, jornais e tabloides do Rio de Janeiro, São Paulo, Brasília, Belo Horizonte, Salvador, Recife, Porto Alegre, Curitiba, Florianópolis, Campo Grande," />
+  <meta property="og:site_name" content="Vou ao Supermercado - Ofertas" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:description" content="Ofertas de Supermercados
+Folhetos e anunciadas na TV
+Hoje
+Ofertas de hoje nos supermercados. Promoções e preços de produtos dos supermercados de todo o Brasil. Carrefour, Extra Hipermercado, Walmart, Guanabara, Sonda, Dia Supermercado, Supermarket, Campeão, Apoio, Super Luna e outros. Folhetos, encartes, catálogos, jornais e tabloides do Rio de Janeiro, São Paulo, Brasília, Belo Horizonte, Salvador, Recife, Porto Alegre, Curitiba, Florianópolis, Campo Grande," />
+  <meta name="twitter:title" content="Inicial - Vou ao Supermercado - Ofertas" />
+  <meta name="onesignal" content="wordpress-plugin" />
+  
 </head>
 
 <body>
@@ -51,35 +81,31 @@
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Search form -->
-          <h1 style="color:white">Encontre aqui - Promoções de supermercados</h1>
+
+          <div class="row">
+            <div class="col-3">
+              <img src="assets/icons/icon_market.png" width="90px" height="90px" alt="">
+            </div>
+            <div class="col-9">
+              <h1 style="color:white">Encontre aqui - Promoções de supermercados</h1>
+            </div>
+          </div>
           <!-- Navbar links -->
           <ul class="navbar-nav align-items-center  ml-md-auto ">
             <li class="nav-item dropdown">
               <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="ni ni-bell-55">Supermercados</i>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="ni ni-bell-55">Atacadistas</i>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="ni ni-bell-55"> Quero adicionar um mercado</i>
               </a>
-              <!--div class="dropdown-menu dropdown-menu-xl  dropdown-menu-right  py-0 overflow-hidden">
-                <div class="list-group list-group-flush">
-                  <a href="#!" class="list-group-item list-group-item-action">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <img alt="Image placeholder" src="assets/img/theme/team-1.jpg" class="avatar rounded-circle">
-                      </div>
-                      <div class="col ml--2">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
-                          </div>
-                          <div class="text-right text-muted">
-                            <small>2 hrs ago</small>
-                          </div>
-                        </div>
-                        <p class="text-sm mb-0">Let's meet at Starbucks at 11:30. Wdyt?</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div-->
             </li>
           </ul>
         </div>
@@ -90,13 +116,6 @@
     <!-- Header -->
     <div class="header">
       <div class="container-fluid">
-
-        <!--- Espaço para Propaganda --->
-        <div class="col-2">
-          <h1>Propaganda aqui</h1>
-        </div>
-        <!--- Fim Espaço para Propaganda --->
-
         <div class="header-body">
           <div class="row align-items-center py-4">
             <h5 class="section-title h1">Ofertas de Supermercados - Indaiatuba</h5>
@@ -170,11 +189,6 @@
               </div>
             </div>
           </div>
-          <!--- Espaço para Propaganda --->
-          <div class="col-2">
-            <h1>Propaganda aqui</h1>
-          </div>
-          <!--- Fim Espaço para Propaganda --->
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
           <p>Promoção: No campo da publicidade, promoção (do inglês promotion) é qualquer ato que venha a elevar o status de um produto, indivíduo, situação, empresa etc.[1] Não precisa de envolver necessariamente remuneração prévia ou acordada. Promoção é um ramo direto da publicidade, do marketing, de relações públicas e do jornalismo, sendo que este último em um âmbito mais moderado e imparcial.
