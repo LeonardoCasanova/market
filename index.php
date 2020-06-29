@@ -66,7 +66,7 @@ Hoje
 Ofertas de hoje nos supermercados. Promoções e preços de produtos dos supermercados de todo o Brasil. Carrefour, Extra Hipermercado, Walmart, Guanabara, Sonda, Dia Supermercado, Supermarket, Campeão, Apoio, Super Luna e outros. Folhetos, encartes, catálogos, jornais e tabloides do Rio de Janeiro, São Paulo, Brasília, Belo Horizonte, Salvador, Recife, Porto Alegre, Curitiba, Florianópolis, Campo Grande," />
   <meta name="twitter:title" content="Inicial - Vou ao Supermercado - Ofertas" />
   <meta name="onesignal" content="wordpress-plugin" />
-  
+
 </head>
 
 <body>
