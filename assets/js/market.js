@@ -1,4 +1,5 @@
 function readTextFile(file, callback) {
+
   var rawFile = new XMLHttpRequest();
   rawFile.overrideMimeType("application/json");
   rawFile.open("GET", file, true);
@@ -10,7 +11,7 @@ function readTextFile(file, callback) {
   rawFile.send(null);
 }
 
-function abreModal(id) {
+function abrirModal(id) {
   readTextFile("src/path/mercados.json", function (text) {
     var data = JSON.parse(text);
     var fotos = data['mercados'][id - 1]['path'];
@@ -34,10 +35,9 @@ function abreModal(id) {
         html += ' <img class="d-block w-100" src="' + fotos[k] + '"  alt="Second slide">' +
                   '</div></div>';
 
-    }
-    
-    document.getElementById("pictures").innerHTML = html;
-    document.getElementById("exampleModalLabel").innerHTML = nome_mercado;
+    }    
+    $("#pictures").html(html);
+    $("#exampleModalLabel").html(nome_mercado);
 
   });
 }
